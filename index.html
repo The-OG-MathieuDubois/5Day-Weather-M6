@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css">
+
+    <title>What's the Weather Like?</title>
+</head>
+<body class="container-fluid flex-column">
+    <header class="col-12 bg-dark text-light">
+        <h1 class="text-center">Weather Dashboard</h1>
+    </header>
+    <div class="container-fluid">
+    <div class="row h-auto no-gutters">
+        <nav class="col-md-3 d-none bg-light d-md-block flex-column p-4 p-lg-3">
+            <!--search for cities-->
+            <h4>Search for a City:</h4>
+            <div class="row align-items-start">
+                <input id="cities" type="search" name="city" value="" class="col-8">
+                    <button id="search" type="submit" class="searchBtn col-3 text-center">
+                        <i class="fas fa-search"></i>
+                    </button>
+            </div>
+            <!--store and display searched cities-->
+            <div id="city-block" class="card col bg-light">
+                <ul id="list"></ul>
+            </div>
+        </nav>
+
+    <div class="card row col-8 align-items-center mx-auto h-auto">
+        <div id="cityWeather" class="card-body text-justify col-md-4">
+            <!--display city of choice's weather-->
+            <h3 id="name"><span id="id"></span></h3><span id="date"></span>
+            <div id="icon">
+                <img></img>
+            </div>
+        </div>
+        <div class="text-justify">
+            <h4 id="temperature"><span id="tmp"></span></h4>
+        </div>
+        <div>
+            <h4 id="humidity"><span id="hmd"></span></h4>
+        </div>
+        <div>
+            <h4 id="wind-speed"><span id="windy"></span></h4>
+        </div>
+        <div>
+            <span></span>
+        </div>
+    </div>
+    </div>
+
+    <div class="container">
+        <div class="row card-deck text-justify justify-content-end">
+            <div id="days-1" class="card mb-2 justify-content-between bg-primary text-light col-2">
+            <!--display predicted forcast-->
+            <span id="1"></span>
+            <div id="icon1">
+                <img id="i1"></img>
+            </div>
+            <span id="t1"></span>
+            <span id="d1"></span>
+           
+            </div>
+            <div id="days-2" class="card mb-2 justify-content-between bg-primary text-light col-2">
+                <!--display predicted forcast-->
+                <span id="2"></span>
+                <div id="icon2">
+                    <img id="i2"></img>
+                </div>
+                <span id="t2"></span>
+                <span id="d2"></span>
+               
+            </div>
+            <div id="days-3" class="card mb-2 justify-content-between bg-primary text-light col-2">
+                <!--display predicted forcast-->
+                <span id="3"></span>
+                <div id="icon3">
+                    <img id="i3"></img>
+                </div>
+                <span id="t3"></span>
+                <span id="d3"></span>
+               
+            </div>
+            <div id="days-4" class="card mb-2 justify-content-between bg-primary text-light col-2">
+                <!--display predicted forcast-->
+                <span id="4"></span>
+                <div id="icon4">
+                    <img id="i4"></img>
+                </div>
+                <span id="t4"></span>
+                <span id="d4"></span>
+               
+            </div>
+            <div id="days-5" class="card mb-2 justify-content-between bg-primary text-light col-2">
+                <!--display predicted forcast-->
+                <span id="5"></span>
+                <div id="icon5">
+                    <img id="i5"></img>
+                </div>
+                <span id="t5"></span>
+                <span id="d5"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
